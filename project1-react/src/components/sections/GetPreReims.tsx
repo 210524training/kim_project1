@@ -22,12 +22,14 @@ const GetPreReims: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
+    <div className="myForms">
         <h3>Pre Approvals</h3>
-        <button onClick={ handleGetPreReim } className="btn btn-primary col-sm-2">Fetch Pre Reims</button>
+        <br/>
+        <button onClick={ handleGetPreReim } className="btn btn-primary">Fetch Pre Reims</button>
+        <br/><br/>
+        <pre id='preReims'>
+        </pre>
     </div>
-    <pre id='preReims'>
-    </pre>
     </>
   );
 };

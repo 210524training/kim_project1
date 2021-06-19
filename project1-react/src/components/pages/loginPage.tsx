@@ -19,9 +19,9 @@ const LoginPage: React.FC<unknown> = (props) => {
     const response = await reimClient.post('/login', {id, password});
     sessionStorage.setItem('user', JSON.stringify(response));
     if (response !== undefined) {
-      console.log(response.data);
+      console.log('response is:', response.data);
       setAuthenticated(true);
-      setRole(response.data.Role); 
+      setRole(response.data.user.Role); 
       if(id !== undefined) {
         setUser(id);
       }
@@ -30,15 +30,16 @@ const LoginPage: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <h1>Login Page!</h1>
-    <div className="container">
-    <form onSubmit={handleFormSubmit}>
-        <label htmlFor="usernameInput" className="form-label col-sm-2">Username</label>
-        <input name="id" type="text" className="form-control col-sm-2" id="usernameInput" onChange={handleUsernameChange}/>
-        <label htmlFor="passwordInput" className="form-label col-sm-2">Password</label>
-        <input name="password" type="password" className="form-control col-sm-2" id="passwordInput" onChange={handlePasswordChange}/>
-        <input type="submit" className="btn btn-primary col-sm-2" value="Submit"/>
-    </form>
+    <div id="login">
+      <h3>Log-In</h3>
+      <br/>
+      <form onSubmit={handleFormSubmit}>
+          <label htmlFor="usernameInput" className="form-label col-sm-2">Username</label><br/>
+          <input type="text" className="form-control-sm" onChange={handleUsernameChange}/><br/>
+          <label htmlFor="passwordInput" className="form-label col-sm-2">Password</label><br/>
+          <input type="password" className="form-control-sm" onChange={handlePasswordChange}/><br/><br/>
+          <input type="submit" className="btn btn-primary" value="Submit"/>
+      </form>
     </div>
     </>
   );

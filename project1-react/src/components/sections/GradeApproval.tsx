@@ -22,17 +22,20 @@ const GradeApproval: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
+    <div className="myForms">
         <h3>Grade Approval</h3>
+        <br/>
         <form onSubmit={ handleGradeApproval }>
           <div className="form-group">
             <label>Reimbursement ID:</label>
             <input className="form-control" onChange={handleReimID}/>
+            <br/>
             <label>Approve</label>
             <input type="radio" onChange={handleApprove} value="approved"/>
             <label>Deny</label>
             <input type="radio" onChange={handleApprove} value="denied"/>
-            <input type="submit" className="btn btn-primary col-sm-2" value="Submit"/>
+            <br/>
+            <input type="submit" className="btn btn-primary" value="Submit"/>
           </div>
       </form>
     </div>

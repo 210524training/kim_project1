@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#login {
+  padding:10vw;
+  text-align:center;
+}
+
+#myNav {
+  padding: 0vw 10vw;
+}
+
+.myForms {
+  padding: 5vw 6vw;
+}
+
+pre {
+  max-height: 500px;
+  background-color:#b2b2b2;
+}

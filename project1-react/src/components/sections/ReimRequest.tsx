@@ -49,32 +49,34 @@ const ReimRequest: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
+    <div className="myForms">
         <h3>Reimbursement Request</h3>
+        <br/>
         <form onSubmit={ handleReimSubmit }>
-        <div className="form-group">
-          <label>Event Type:</label>
-          <input className="form-control" id="eventType" name='eventType' onChange={handleEventType}/>
-          <label> Raw Cost:</label>
-          <input className="form-control" id="rawCost" name='rawCost' onChange={handleRawCost}/>
-          <label>Start Date:</label>
-          <input className="form-control" id="startDate" name='startDate' onChange={handleStartDate}/>
-          <label>End Date:</label>
-          <input className="form-control" id="endDate" name='endDate' onChange={handleEndDate}/>
-          <label>Location:</label>
-          <input className="form-control" id="location" name='location' onChange={handleLocation}/>
-          <label>Description:</label>
-          <input className="form-control" id="description" name='description' onChange={handleDescription}/>
-          <label>Grading Format:</label>
-          <input className="form-control" id="gradingFormat" name='gradingFormat' onChange={handleGradingFormat}/>
-          <label>Justification:</label>
-          <input className="form-control" id="justification" name='justification' onChange={handleJustification}/>
-          <label>Approver Email (optional):</label>
-          <input className="form-control" id="approverEmail" name='approverEmail' onChange={handleApproverEmail}/>
-          <label>Interested Parties:</label>
-          <input className="form-control" id="interestedParties" name='interestedParties'/>
-          <input type="submit" className="btn btn-primary col-sm-2" value="Submit"/>
-        </div>
+          <div className="form-group">
+            <label>Event Type:</label>
+            <input className="form-control" onChange={handleEventType}/>
+            <label> Raw Cost:</label>
+            <input className="form-control" onChange={handleRawCost}/>
+            <label>Start Date:</label>
+            <input className="form-control" onChange={handleStartDate}/>
+            <label>End Date:</label>
+            <input className="form-control" onChange={handleEndDate}/>
+            <label>Location:</label>
+            <input className="form-control" onChange={handleLocation}/>
+            <label>Description:</label>
+            <input className="form-control" onChange={handleDescription}/>
+            <label>Grading Format:</label>
+            <input className="form-control" onChange={handleGradingFormat}/>
+            <label>Justification:</label>
+            <input className="form-control" onChange={handleJustification}/>
+            <label>Approver Email (optional):</label>
+            <input className="form-control" onChange={handleApproverEmail}/>
+            <label>Interested Parties:</label>
+            <input className="form-control"/>
+            <br/>
+            <input type="submit" className="btn btn-primary" value="Submit"/>
+          </div>
       </form>
     </div>
     </>

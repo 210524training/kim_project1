@@ -25,19 +25,23 @@ const PreReimApproval: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
-        <h3>Employee Cancel or approve different amount</h3>
+    <div className="myForms">
+        <h3>Pre-Reimbursement Approval</h3>
+        <br/>
         <form onSubmit={ handlePreApproval }>
           <div className="form-group">
             <label>Reimbursement ID:</label>
             <input className="form-control" onChange={handleReimID}/>
+            <br/>
             <label>Approve</label>
             <input type="radio" onChange={handleApprove} value="approved"/>
             <label>Deny</label>
             <input type="radio" onChange={handleApprove} value="rejected"/>
+            <br/><br/>
             <label>Reason:</label>
             <input className="form-control" onChange={handleReason}/>
-            <input type="submit" className="btn btn-primary col-sm-2" value="Submit"/>
+            <br/>
+            <input type="submit" className="btn btn-primary" value="Submit"/>
           </div>
       </form>
     </div>

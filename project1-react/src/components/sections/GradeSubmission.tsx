@@ -21,8 +21,9 @@ const GradeSubmission: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
+    <div className="myForms">
       <h3>Grade Submission</h3>
+      <br/>
       <form onSubmit={ handleGradeSubmit }>
         <div className="form-group">
           <label>Reimbursment ID:</label>
@@ -31,7 +32,7 @@ const GradeSubmission: React.FC<unknown> = (props) => {
           <label>Grade:</label>
           <input className="form-control" name='grade' onChange={handleGrade}/>
           <br/>
-          <input type="submit" className="btn btn-primary col-sm-2" value="Submit"/>
+          <input type="submit" className="btn btn-primary" value="Submit"/>
         </div>
       </form>
     </div>

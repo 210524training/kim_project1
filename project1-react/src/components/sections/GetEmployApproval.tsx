@@ -22,12 +22,15 @@ const GetEmployApproval: React.FC<unknown> = (props) => {
 
   return (
     <>
-    <div className="container">
+    <div className="myForms">
         <h3>Approvals to Changes</h3>
-        <button onClick={ handleGetEmpApproval } className="btn btn-primary col-sm-2">Fetch My Approvals</button>
+        <br/>
+        <button onClick={ handleGetEmpApproval } className="btn btn-primary">Fetch My Approvals</button>
+        <br/><br/>
+        <pre id='empApproval'>
+        </pre>
     </div>
-    <pre id='empApproval'>
-    </pre>
+
     </>
   );
 };

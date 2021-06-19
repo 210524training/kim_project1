@@ -12,11 +12,11 @@ function App() {
   return (
     <>
       <UserContext.Provider value={{ authenticated, setAuthenticated, user, setUser, role, setRole }}>
-      <Router>
-        <Nav/>
-        <div> user is {`${authenticated ? "" : "not"} authenticated`} </div>
-        <AppRoutes/>
-      </Router>
+        <Router>
+          <Nav/>
+          <div> user is {`${authenticated ? "" : "not"} authenticated`} </div>
+          <AppRoutes/>
+        </Router>
       </UserContext.Provider>
     </>
   );
