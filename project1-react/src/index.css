@@ -22,10 +22,27 @@ code {
 }
 
 .myForms {
-  padding: 5vw 6vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding:2vw;
+
 }
 
 pre {
-  max-height: 500px;
-  background-color:#b2b2b2;
+  max-height: 400px;
+  background-color:#E5E7E9;
+  border-style: inset;
+  min-height: 100px;
+
+}
+
+#empContainer {
+  padding: 2vw 6vw;
+}
+
+#employContainer {
+  text-align: center;
+  padding: 4vw;
+  background-color:darkgray;
+
 }

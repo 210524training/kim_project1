@@ -26,7 +26,7 @@ const PreReimApproval: React.FC<unknown> = (props) => {
   return (
     <>
     <div className="myForms">
-        <h3>Pre-Reimbursement Approval</h3>
+        <h3>Reim Approval</h3>
         <br/>
         <form onSubmit={ handlePreApproval }>
           <div className="form-group">

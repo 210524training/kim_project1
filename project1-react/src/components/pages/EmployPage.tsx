@@ -9,18 +9,34 @@ import GetPreReims from '../sections/GetPreReims';
 import GetGradedReim from '../sections/GetGradedReim';
 import GetEmployApproval from '../sections/GetEmployApproval';
 import UserContext from '../../context/UserContext';
+import SubmitMoreInfo from '../sections/SubmitMoreInfo';
+import GetInfoRequest from '../sections/GetInfoRequest';
+import RequestInfo from '../sections/ReqeustInfo';
+import GetPostReims from '../sections/GetPostApproval';
+import GetGrades from '../sections/GetGrades';
+import GetMoreInfoSuper from '../sections/GetMoreInfoSuper';
 
 const EmployPage: React.FC<unknown> = (props) => {
   const { role } = useContext(UserContext);
   return (
     <>
+    <div id='empContainer'>
+      <hr/>
+      <div className="row">
+        <div className="col-sm">
+          <ReimRequest/>
+        </div>
+        <div className="col-sm">
+          <GradeSubmission/>
+        </div>
+      </div>
       <hr/>
       <div className="row">
         <div className="col-md">
-          <ReimRequest/>
+          <GradeSubmission/>
         </div>
         <div className="col-md">
-          <GradeSubmission/>
+          <GetGrades/>
         </div>
       </div>
       <hr/>
@@ -31,36 +47,66 @@ const EmployPage: React.FC<unknown> = (props) => {
         <div className="col-sm">
           <GetEmployApproval/>
         </div>
-      </div>            
+      </div>
+      <hr/>
+      <div className="row">
+        <div className="col-sm">
+          <SubmitMoreInfo/>
+        </div>
+        <div className="col-sm">
+          <GetInfoRequest/>
+        </div>
+      </div>
+      <div id='employContainer'>
+        <h3>Supervisor</h3>
+      </div>               
         { role !== 'employee' &&
           <>
-            <hr/>
             <div className="row">
-              <div className="col-sm">
+              <div className="col-md">
+                <RequestInfo/>
+              </div>
+              <div className="col-md">
+                <GetMoreInfoSuper/>
+              </div>
+            </div>
+            <hr/>
+          { role !== 'benco' &&
+            <div className="row">
+              <div className="col-md">
                 <PreReimApproval/>
               </div>
-              <div className="col-sm">
+              <div className="col-md">
                 <GetPreReims/>
+              </div>    
+            </div>    
+          }
+          { role === 'benco' &&
+            <div className="row">
+              <div className="col-md">
+                <PostReimApproval/>
               </div>
-            </div>   
+              <div className="col-md">
+                <GetPostReims/>
+              </div>
+            </div>        
+          }
             { role === 'benco' &&
               <>
                 <hr/>          
                 <div className="row">
-                  <div className="col-sm">
-                    <PostReimApproval/>
-                  </div>
-                  <div className="col-sm">
-                    <GetGradedReim/>
-                  </div>
-                  <div className="col-sm">
+                  <div className="col-md">
                     <GradeApproval/>
+                  </div>
+                  <div className="col-md">
+                    <GetGradedReim/>
                   </div>
                  </div>   
               </>
             }
           </>
         }
+    </div>
     </>
   );
 };

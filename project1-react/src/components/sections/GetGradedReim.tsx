@@ -25,7 +25,7 @@ const GetGradedReims: React.FC<unknown> = (props) => {
     <div className="myForms">
         <h3>Graded Reimbursements</h3>
         <br/>
-        <button onClick={ handleGetGradedReim } className="btn btn-primary">Fetch Graded Reims</button>
+        <button onClick={ handleGetGradedReim } className="btn btn-primary">Fetch</button>
         <br/><br/>
         <pre id='gradedReims'>
         </pre>

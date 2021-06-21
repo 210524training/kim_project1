@@ -32,11 +32,12 @@ const Nav: React.FC<unknown> = (props) => {
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/employee">Work-Page</NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" onClick={handleLogout} to="/login">Log-out</NavLink>
+                </li>
               </>
             }
-            <li className="nav-item">
-              <NavLink className="nav-link" onClick={handleLogout} to="/login">Log-out</NavLink>
-            </li>
+
           </ul>
         </div>
     </nav>

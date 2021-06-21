@@ -24,14 +24,14 @@ const PostReimApproval: React.FC<unknown> = (props) => {
 
   const handlePostApproval = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await reimClient.patch('employee/super/postreim', {reimID, approve, reason, finalAmount});
+    const response = await reimClient.patch('employee/benco/postreim', {reimID, approve, reason, finalAmount});
     console.log("the db response is: ", response);
   }
 
   return (
     <>
     <div className="myForms">
-        <h3>Final Approval</h3>
+        <h3>Benco Approval</h3>
         <br/>
         <form onSubmit={ handlePostApproval }>
           <div className="form-group">
@@ -42,7 +42,7 @@ const PostReimApproval: React.FC<unknown> = (props) => {
             <input type="radio" onChange={handleApprove} value="approved"/>
             <label>Deny</label>
             <input type="radio" onChange={handleApprove} value="rejected"/>
-            <br/>
+            <br/><br/>
             <label>Reason:</label>
             <input className="form-control" onChange={handleReason}/>
             <br/>

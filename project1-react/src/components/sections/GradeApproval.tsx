@@ -34,7 +34,7 @@ const GradeApproval: React.FC<unknown> = (props) => {
             <input type="radio" onChange={handleApprove} value="approved"/>
             <label>Deny</label>
             <input type="radio" onChange={handleApprove} value="denied"/>
-            <br/>
+            <br/> <br/>
             <input type="submit" className="btn btn-primary" value="Submit"/>
           </div>
       </form>

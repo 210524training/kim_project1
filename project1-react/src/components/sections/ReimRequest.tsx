@@ -54,26 +54,50 @@ const ReimRequest: React.FC<unknown> = (props) => {
         <br/>
         <form onSubmit={ handleReimSubmit }>
           <div className="form-group">
-            <label>Event Type:</label>
-            <input className="form-control" onChange={handleEventType}/>
-            <label> Raw Cost:</label>
-            <input className="form-control" onChange={handleRawCost}/>
-            <label>Start Date:</label>
-            <input className="form-control" onChange={handleStartDate}/>
-            <label>End Date:</label>
-            <input className="form-control" onChange={handleEndDate}/>
-            <label>Location:</label>
-            <input className="form-control" onChange={handleLocation}/>
+            <div className="row">
+              <div className="col-md">
+                <label>Event Type:</label>
+                <input className="form-control" onChange={handleEventType}/>
+              </div>
+              <div className="col-md">
+                <label> Raw Cost:</label>
+                <input className="form-control" onChange={handleRawCost}/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md">
+                <label>Start Date:</label>
+                <input className="form-control" onChange={handleStartDate}/>
+              </div>
+              <div className="col-md">
+                <label>End Date:</label>
+                <input className="form-control" onChange={handleEndDate}/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md">
+                <label>Location:</label>
+                <input className="form-control" onChange={handleLocation}/>
+              </div>
+              <div className="col-md">
+                <label>Grading Format:</label>
+                <input className="form-control" onChange={handleGradingFormat}/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md">
+                <label>Approver Email (optional):</label>
+                <input className="form-control" onChange={handleApproverEmail}/>
+              </div>
+              <div className="col-md">
+                <label>Interested Parties:</label>
+                <input className="form-control"/>
+              </div>
+            </div>
             <label>Description:</label>
             <input className="form-control" onChange={handleDescription}/>
-            <label>Grading Format:</label>
-            <input className="form-control" onChange={handleGradingFormat}/>
             <label>Justification:</label>
             <input className="form-control" onChange={handleJustification}/>
-            <label>Approver Email (optional):</label>
-            <input className="form-control" onChange={handleApproverEmail}/>
-            <label>Interested Parties:</label>
-            <input className="form-control"/>
             <br/>
             <input type="submit" className="btn btn-primary" value="Submit"/>
           </div>
