@@ -23,7 +23,7 @@ const GradeApproval: React.FC<unknown> = (props) => {
   return (
     <>
     <div className="myForms">
-        <h3>Grade Approval</h3>
+        <h3>Final Approval</h3>
         <br/>
         <form onSubmit={ handleGradeApproval }>
           <div className="form-group">

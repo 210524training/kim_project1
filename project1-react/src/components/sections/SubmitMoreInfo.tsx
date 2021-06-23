@@ -24,16 +24,16 @@ const SubmitMoreInfo: React.FC<unknown> = (props) => {
     <div className="myForms">
         <h3>Submit Requested Info</h3>
         <br/>
-        <form onSubmit={ handleRequestInfo }>
-          <div className="form-group">
-            <label>Request ID:</label>
-            <input className="form-control" onChange={ handleRequestID }/>
-            <br/>
-            <label>Answer:</label>
-            <input className="form-control" onChange={ handleAnswer }/>
-            <br/>
-            <input type="submit" className="btn btn-primary" value="Submit"/>
-          </div>
+      <form onSubmit={ handleRequestInfo }>
+        <div className="form-group">
+          <label>Request ID:</label>
+          <input className="form-control" onChange={ handleRequestID }/>
+          <br/>
+          <label>Answer:</label>
+          <input className="form-control" onChange={ handleAnswer }/>
+          <br/>
+          <input type="submit" className="btn btn-primary" value="Submit"/>
+        </div>
       </form>
     </div>
     </>
