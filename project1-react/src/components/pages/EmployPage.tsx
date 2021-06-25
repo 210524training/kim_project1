@@ -18,16 +18,19 @@ import GetMoreInfoSuper from '../sections/GetMoreInfoSuper';
 import GetBasicInfo from '../sections/GetBasicInfo';
 
 const EmployPage: React.FC<unknown> = (props) => {
-  const { role } = useContext(UserContext);
+  const { role, user } = useContext(UserContext);
   return (
     <>
     <div id='empContainer'>
       <hr/>
+      <div id='infoBox'>
+        <span>Logged-in: <b>{user}</b></span>
+      </div>
       <div className="row">
-        <div className="col-sm">
+        <div className="col-md">
           <ReimRequest/>
         </div>
-        <div className="col-sm">
+        <div className="col-md">
           <GetBasicInfo/>
         </div>
       </div>
@@ -42,19 +45,19 @@ const EmployPage: React.FC<unknown> = (props) => {
       </div>
       <hr/>
       <div className="row">
-        <div className="col-sm">
+        <div className="col-md">
           <ChangeApproval/>
         </div>
-        <div className="col-sm">
+        <div className="col-md">
           <GetEmployApproval/>
         </div>
       </div>
       <hr/>
       <div className="row">
-        <div className="col-sm">
+        <div className="col-md">
           <SubmitMoreInfo/>
         </div>
-        <div className="col-sm">
+        <div className="col-md">
           <GetInfoRequest/>
         </div>
       </div>
